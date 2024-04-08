@@ -1,0 +1,10 @@
+SELECT DISTINCT(city)
+FROM station
+WHERE id % 2 = 0
+ORDER BY city ASC;
+
+  1.SQL uses = for equality comparison, not ==.
+
+  2.In SQL, when using the DISTINCT keyword, you can write it with or without parentheses around the column name(s) or expression(s) you want to be distinct.
+    The reason is that SQL is generally lenient when it comes to whitespace and formatting.
+    In SQL, whitespace (spaces, tabs, line breaks) is usually ignored, except when it's needed to separate keywords, identifiers, or literals.
