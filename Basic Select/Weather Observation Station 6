@@ -16,6 +16,8 @@ SELECT CITY
 FROM STATION
 WHERE CITY REGEXP '^[aeiouAEIOU]';
 
+# ^ denotes beginning of the string and values in [] is the probable first letter.
+
 
 
 
