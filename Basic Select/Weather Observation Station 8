@@ -1,0 +1,18 @@
+SELECT DISTINCT(CITY)
+FROM STATION
+WHERE LOWER(LEFT(city,1)) IN ('a','e','i','o','u') AND LOWER(RIGHT(city,1)) IN ('a','e','i','o','u');
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[aeiouAEIOU].*[aeiouAEIOU]$';
+
+REGEX breakdown :
+^             - beginning of the line
+[aeiouAEIOU]  - one character in the start is a vowel
+.             - A wildcard character that matches any single character except for newline characters.
+                It can represent letters, digits, whitespace, punctuation, or any other character.
+*             - a quantifier that specifies that the preceding character can appear zero or more times.
+Therefore,
+.*            - Matches any sequence of characters, including empty strings
+[aeiouAEIOU]  - one character is a vowel BEFORE END OF LINE
+$             - END OF LINE
