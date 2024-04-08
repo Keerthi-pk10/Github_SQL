@@ -1,0 +1,7 @@
+Select * 
+from city
+where ID = 1661
+
+Select * 
+from city
+where ID = "1661" # if ID is a numeric var then implicit type conversion takes place in some dbms.
