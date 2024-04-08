@@ -1,0 +1,11 @@
+Select CITY, LENGTH(CITY) as LEN
+from STATION
+order by LEN, CITY ASC
+LIMIT 1;
+
+Select CITY,LENGTH(CITY)
+from STATION
+order by LENGTH(CITY) DESC , CITY ASC
+LIMIT 1;
+
+## In SQL,in the ORDER BY clause should not be used to create an alias for the expression being sorted. 
