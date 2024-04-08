@@ -1,0 +1,21 @@
+Select DISTINCT CITY
+from STATION
+where CITY like "a%" 
+or CITY like "e%" 
+or CITY like "i%" 
+or CITY like "o%" 
+or CITY like "u%" 
+
+SELECT DISTINCT(city)
+FROM station
+WHERE LEFT(city,1) IN ('a','e','i','o','u');
+
+OPTIMAL SOLN :
+
+SELECT CITY
+FROM STATION
+WHERE CITY REGEXP '^[aeiouAEIOU]';
+
+
+
+
