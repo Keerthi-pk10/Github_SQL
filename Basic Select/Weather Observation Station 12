@@ -20,3 +20,11 @@ REGEX BREAKDOWN :
 .*               - Sequence of any characters (.) occurring in any length or repitition (*)     |    Word ending
 [^aeiouAEIOU]    - Last character not (^) a vowel                                              |        with
 $                - End of line                                                                |         Vowel
+
+OPTIMAL SOLUTION
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '(?i)^[^aeiou].*[^aeiou]$';
+
+(?i) - ignores case
