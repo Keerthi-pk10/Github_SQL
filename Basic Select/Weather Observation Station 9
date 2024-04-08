@@ -1,0 +1,13 @@
+Select distinct CITY
+from STATION 
+WHERE LEFT(CITY,1) NOT IN ("a","e","o","u","i");
+
+Select distinct CITY
+from STATION 
+WHERE CITY NOT REGEXP '^[aeiouAEIOU]'
+
+Select distinct CITY
+from STATION 
+WHERE CITY REGEXP '^[^aeiouAEIOU]'
+
+Here , ^ - not
