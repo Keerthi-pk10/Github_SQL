@@ -1,0 +1,16 @@
+Select concat(name,'(',upper(left(occupation,1)),')')
+from occupations
+order by name;
+
+SELECT CONCAT('There are a total of ', COUNT(Occupation), ' ', LOWER(Occupation), 's.')
+FROM occupations
+GROUP BY Occupation
+ORDER BY COUNT(Occupation) ASC,Occupation ASC;
+
+# Note : 
+
+Select concat(name,'(',upper(left(occupation,1)),')')  
+OUTPUT : Aamina(D)
+
+Select name,concat('(',upper(left(occupation,1)),')')
+OUTPUT : Aamina (D)
