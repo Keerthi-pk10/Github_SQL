@@ -1,0 +1,14 @@
+select name
+from students
+where marks>75
+order by right(name,3) asc, ID asc
+
+select name 
+from students 
+where marks > 75 
+order by substring(name,length(name)-2,3), id
+
+SUBSTRING(name, LENGTH(name) - 2, 3): This extracts a substring from the name column, 
+                                      starting from the third-to-last character (LENGTH(name) - 2) 
+                                      and extending for three characters (3).
+This effectively captures the last three characters of each name.
