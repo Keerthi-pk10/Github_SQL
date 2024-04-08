@@ -1,0 +1,21 @@
+select * 
+from city 
+where countrycode="jpn" 
+
+## In most SQL databases, string literals should be enclosed in single quotes (' '), not double quotes " "
+
+## Case sensitivity :
+
+1. SQL keywords (e.g., SELECT, FROM, WHERE) are generally not case sensitive.
+2. The case sensitivity of table and column names depends on the settings of the database server 
+    (e.g., PostgreSQL: Case-sensitive by default, MySQL: Case-insensitive by default).
+3. String comparison may be case sensitive or case insensitive depending on the collation settings of the database or individual columns.
+   Collation is a set of rules that determines how data is sorted and compared in a database.
+   It defines the character set encoding, case sensitivity, accent sensitivity, and other locale-specific considerations for text data.
+
+
+Alt :
+
+select * 
+from city 
+where countrycode in ('JPN');
